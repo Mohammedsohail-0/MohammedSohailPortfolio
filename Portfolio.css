@@ -1,0 +1,355 @@
+/* ==========================================================================
+   Design tokens
+   ========================================================================== */
+.portfolio {
+    --ink: #0e1420;
+    --panel: #141c2b;
+    --panel-line: #263248;
+    --steel: #6fa8dc;
+    --steel-dim: #3d5a80;
+    --text-primary: #e8ecf2;
+    --text-secondary: #8b97ab;
+    --mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    background-color: var(--ink);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    min-height: 100vh;
+}
+
+.portfolio a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Nav
+   ========================================================================== */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(16px, 3vw, 28px) clamp(20px, 6vw, 80px);
+    border-bottom: 1px solid var(--panel-line);
+}
+
+.nav-mark {
+    font-family: var(--mono);
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: var(--steel);
+    border: 1px solid var(--steel-dim);
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+    padding: clamp(4rem, 12vw, 8rem) clamp(20px, 6vw, 80px) clamp(3rem, 8vw, 5rem);
+    max-width: 900px;
+}
+
+.hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin: 0 0 1.5rem;
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+}
+
+.hero-sub {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 0 2.5rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.85rem 1.6rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--steel);
+    color: var(--ink);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background-color: #8bb8e5;
+}
+
+.btn-secondary {
+    border: 1px solid var(--panel-line);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    border-color: var(--steel-dim);
+    color: var(--steel);
+}
+
+/* ==========================================================================
+   Section label (shared)
+   ========================================================================== */
+.section-label {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin: 0 0 2rem;
+}
+
+/* ==========================================================================
+   Work / Projects
+   ========================================================================== */
+.work {
+    padding: clamp(3rem, 8vw, 5rem) clamp(20px, 6vw, 80px);
+    border-top: 1px solid var(--panel-line);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 3vw, 1.5rem);
+}
+
+.project-card {
+    background-color: var(--panel);
+    border: 1px solid var(--panel-line);
+    border-radius: 10px;
+    padding: clamp(1.25rem, 3vw, 1.75rem);
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: var(--steel-dim);
+}
+
+.project-tag {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: var(--steel);
+    margin: 0 0 0.75rem;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+}
+
+.project-desc {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0 0 1.25rem;
+    flex-grow: 1;
+}
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+}
+
+.project-stack li {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    border: 1px solid var(--panel-line);
+    border-radius: 4px;
+    padding: 0.2rem 0.55rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    font-size: 0.88rem;
+    color: var(--steel);
+    transition: opacity 0.2s ease;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+    opacity: 0.75;
+}
+
+/* ==========================================================================
+   About / Skills
+   ========================================================================== */
+.about {
+    padding: clamp(3rem, 8vw, 5rem) clamp(20px, 6vw, 80px);
+    border-top: 1px solid var(--panel-line);
+}
+
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(2rem, 5vw, 4rem);
+}
+
+.about-text {
+    flex: 1 1 420px;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.skills-list {
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.skills-group-label {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: var(--steel);
+    margin: 0 0 0.35rem;
+}
+
+.skills-group-items {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+.contact {
+    padding: clamp(3rem, 10vw, 6rem) clamp(20px, 6vw, 80px);
+    border-top: 1px solid var(--panel-line);
+    text-align: center;
+}
+
+.contact-title {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+}
+
+.contact-sub {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin: 0 auto 2rem;
+}
+
+.email-btn {
+    font-family: var(--mono);
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+    color: var(--text-primary);
+    background: var(--panel);
+    border: 1px solid var(--panel-line);
+    border-radius: 8px;
+    padding: 0.9rem 1.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: border-color 0.2s ease;
+}
+
+.email-btn:hover,
+.email-btn:focus-visible {
+    border-color: var(--steel-dim);
+}
+
+.email-btn-hint {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    color: var(--steel);
+}
+
+.github-link {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.github-link:hover,
+.github-link:focus-visible {
+    color: var(--steel);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    padding: 2rem clamp(20px, 6vw, 80px);
+    border-top: 1px solid var(--panel-line);
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    .portfolio * {
+        transition: none !important;
+    }
+}
