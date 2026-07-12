@@ -208,7 +208,7 @@ function About() {
             </div>
 
             <p className="chess-line">
-                Outside of code, I play a lot of <span className="highlight">chess</span> —
+                Outside of code, I play a lot of <span onClick={()=>window.open("https://www.chess.com/member/sohail0987654321")} className="highlight">chess.com</span> —
                 badly, but with real commitment. Turns out losing gracefully is
                 good practice for debugging.
             </p>

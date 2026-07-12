@@ -324,7 +324,7 @@ a {
 }
 
 .chess-line .highlight {
-    color: var(--accent-secondary, var(--accent));
+    color: rgb(0, 165, 0)
     font-weight: var(--weight-bold);
 }
 
